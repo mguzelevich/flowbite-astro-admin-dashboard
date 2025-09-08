@@ -36,16 +36,20 @@
 		"start": "astro dev"
 	},
 	"dependencies": {
-		"@astrojs/sitemap": "^1.1.0",
-		"@astrojs/tailwind": "^3.0.1",
+		"@astrojs/sitemap": "3.5.1",
 		"@faker-js/faker": "^7.6.0",
+		"@tailwindcss/vite": "^4.1.13",
 		"apexcharts": "^3.37.2",
-		"astro": "^2.0.4",
-		"flowbite": "^2.1.1",
-		"flowbite-typography": "^1.0.3",
+		"astro": "5.13.5",
+		"flowbite": "^3.1.2",
+		"hono": "^4.7.2",
+		"hono-openapi": "^0.4.8",
 		"shiki": "^0.14.1",
-		"tailwind-scrollbar": "^3.0.0",
-		"tailwindcss": "^3.0.24"
+		"svelte": "^5.37.0",
+		"tailwindcss": "^4.1.13",
+		"ulid": "^3.0.1",
+		"wrangler": "4",
+		"zod": "^3.24.1"
 	},
 	"devDependencies": {
 		"@types/eslint": "^8.21.1",
@@ -60,6 +64,7 @@
 		"eslint-plugin-astro": "^0.23.0",
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-prettier": "^4.2.1",
-		"eslint-plugin-tsdoc": "^0.2.17"
+		"eslint-plugin-tsdoc": "^0.2.17",
+		"flowbite-typography": "^1.0.5"
 	}
 }

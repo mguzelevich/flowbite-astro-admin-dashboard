@@ -4,6 +4,8 @@ import { url } from '../lib/data.js';
 
 import { SITE_TITLE } from './constants.js';
 
+import '@/styles/global.css';
+
 const { class: clazz } = Astro.props;
 ---
 
@@ -53,12 +55,17 @@ const { class: clazz } = Astro.props;
 		]}
 	>
 		<slot />
+		<script
+			is:inline
+			src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
+		></script>
 	</body>
 </html>
 
 <script>
 	import 'flowbite';
-	import 'flowbite/dist/datepicker.js';
+	import 'flowbite/dist/flowbite.min.js';
+	// import 'flowbite-datepicker/dist/datepicker.js';
 </script>
 
 <style is:global>

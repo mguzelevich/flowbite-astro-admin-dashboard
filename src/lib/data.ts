@@ -4,10 +4,13 @@
 import { API_URL, REMOTE_ASSETS_BASE_URL } from '../app/constants.js';
 import type { Endpoint, EndpointsToOperations } from '../types/entities.js';
 
+import productsStaticJSON from '../../data/products.json' assert { type: 'json' };
+import usersStaticJSON from '../../data/users.json' assert { type: 'json' };
+
 export async function fetchData<Selected extends Endpoint>(endpoint: Selected) {
 	const apiEndpoint = `${API_URL}${endpoint}`;
 
-	console.info(`Fetching ${apiEndpoint}…`);
+	console.log(`Fetching ${apiEndpoint}…`);
 	return fetch(apiEndpoint)
 		.then(
 			(r) =>
@@ -30,4 +33,14 @@ export function url(path = '') {
 export function asset(path: string) {
 	// NOTE: Fetching remote assets from the Hugo admin dashboard Vercel dist.
 	return `${REMOTE_ASSETS_BASE_URL}/${path}`;
+}
+
+export function staticAsset(path: string) {
+	if (path.startsWith('products')) {
+		return productsStaticJSON;
+	}
+	if (path.startsWith('users')) {
+		return usersStaticJSON;
+	}
+	return '{}';
 }
